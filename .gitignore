@@ -1,0 +1,8 @@
+# IDEA
+.idea
+
+# npm modules
+/node_modules
+
+# Tests coverage results
+/coverage
