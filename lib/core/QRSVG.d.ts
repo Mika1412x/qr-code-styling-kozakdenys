@@ -5,6 +5,7 @@ export default class QRSVG {
     _window: Window;
     _element: SVGElement;
     _defs: SVGElement;
+    _backgroundClipPath?: SVGElement;
     _dotsClipPath?: SVGElement;
     _cornersSquareClipPath?: SVGElement;
     _cornersDotClipPath?: SVGElement;

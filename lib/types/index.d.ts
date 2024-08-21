@@ -75,6 +75,7 @@ export interface QRCode {
     renderTo2dContext(context: CanvasRenderingContext2D, cellSize?: number): void;
 }
 export declare type Options = {
+    experimental?: boolean;
     type?: DrawType;
     shape?: ShapeType;
     width?: number;
@@ -112,9 +113,11 @@ export declare type Options = {
         gradient?: Gradient;
     };
     backgroundOptions?: {
+        round?: number;
         color?: string;
         gradient?: Gradient;
     };
+    extensionOptions?: any;
 };
 export declare type FilterFunction = (i: number, j: number) => boolean;
 export declare type DownloadOptions = {
@@ -151,4 +154,8 @@ export declare type RotateFigureArgsCanvas = RotateFigureArgs & {
     context: CanvasRenderingContext2D;
 };
 export declare type GetNeighbor = (x: number, y: number) => boolean;
+export declare type ExtensionFunction = ({ options, svg }: {
+    options: Options;
+    svg: SVGElement;
+}) => void;
 export {};
