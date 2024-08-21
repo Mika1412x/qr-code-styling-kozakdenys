@@ -10,6 +10,7 @@ export type Extension = "svg" | "png" | "jpeg" | "webp";
 export type GradientType = "radial" | "linear";
 export type DrawType = "canvas" | "svg";
 export type ShapeType = "square" | "circle";
+export type BackgroundShape = "square" | "circle";
 
 export interface Canvas extends HTMLCanvasElement {
   toBuffer?: (type: string) => Buffer;
@@ -70,6 +71,10 @@ export interface DrawTypes {
 
 export interface ShapeTypes {
   [key: string]: ShapeType;
+}
+
+export interface BackgroundShapes {
+  [key: string]: BackgroundShape;
 }
 
 export type TypeNumber =
@@ -169,6 +174,7 @@ export type Options = {
     gradient?: Gradient;
   };
   backgroundOptions?: {
+    shape?: BackgroundShape;
     color?: string;
     gradient?: Gradient;
   };
